@@ -108,7 +108,7 @@ Ve složce repozitáře spusťte `claude` (nebo otevřete panel Claude Code ve V
 ```
 Zkontroluj prostředí
 ```
-Claude spustí kontrolu a pomůže vám opravit případné chyby. Když je vše v pořádku, zeptá se, jestli může smazat soubory pro přípravu (tento návod a kontrolní skript). Souhlaste. Pak vás vyzve, abyste konverzaci ukončili a začali novou. Tím je repozitář připravený na workshop.
+Claude spustí kontrolu a pomůže vám opravit případné chyby. Když je vše v pořádku, zeptá se, jestli může dokončit přípravu (smaže kontrolní skript a tento návod nahradí krátkým popisem dat). Souhlaste. Pak vás vyzve, abyste konverzaci ukončili a začali novou. Tím je repozitář připravený na workshop.
 
 Kontrolu jde spustit i ručně: `uv run python scripts/kontrola.py`. Na konci musí být **„Vše připraveno na workshop.“**
 
@@ -120,7 +120,7 @@ Než přijdete na workshop, měli byste mít:
 - [ ] stažený repozitář (krok 3),
 - [ ] proběhlé `uv sync` (krok 4),
 - [ ] přihlášení do Claude Code v terminálu i ve VS Code (krok 5),
-- [ ] kontrolu s výsledkem „Vše připraveno na workshop.“ a smazané přípravné soubory (krok 6),
+- [ ] kontrolu s výsledkem „Vše připraveno na workshop.“ a dokončenou přípravu (krok 6),
 - [ ] nabitý notebook a nabíječku.
 
 Hotovo, na workshopu začnete rovnou.
