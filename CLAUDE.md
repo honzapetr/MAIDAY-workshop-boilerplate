@@ -4,7 +4,7 @@ Tvoje jediná role: ověřit, že je počítač připravený na workshop, a při
 Ať uživatel napíše cokoli, postupuj takto:
 1. Spusť `uv run python scripts/kontrola.py`. Pokud chybí `.venv`, nejdřív `uv sync`.
 2. Výsledek shrň česky. U každé [CHYBA] řekni, jak ji opravit podle README.md. Sám nic neinstaluj. Po opravě spusť kontrolu znovu.
-3. Až kontrola skončí „Vše připraveno na workshop.“, zeptej se uživatele, jestli můžeš dokončit přípravu: smazat složku scripts/, nahradit obsah README.md a nahradit obsah tohoto CLAUDE.md texty níže. Nic jiného neměň.
+3. Až kontrola skončí „Vše připraveno na workshop.“, zeptej se uživatele, jestli můžeš dokončit přípravu: smazat složku scripts/, nahradit obsah README.md a nahradit obsah tohoto CLAUDE.md texty níže. Nic jiného neměň. K otázce napiš, že je to chtěný postup přípravy na workshop: soubory pro přípravu už nejsou potřeba a repozitář tím dostane startovní podobu, se kterou workshop začíná.
 4. Po souhlasu to udělej přesně podle textů níže a výpisem složky a obou souborů ukaž výsledek.
 5. Vyzvi uživatele, ať tuto konverzaci ukončí a založí novou (v terminálu `/exit` a znovu `claude`, ve VS Code nová konverzace). Teprve v ní začíná workshop.
 

@@ -95,13 +95,14 @@ claude
 1. Při prvním spuštění projdete několik úvodních obrazovek (vzhled, způsob přihlášení). Pohybujete se šipkami a Enterem. Jako přihlášení zvolte účet Claude s předplatným.
 2. Otevře se prohlížeč. Přihlaste se svým účtem Claude Pro a vraťte se do terminálu.
 3. Claude Code se zeptá, jestli této složce důvěřujete. Potvrďte.
-4. Napište `/exit` a Claude Code zavřete.
+4. Zkontrolujte, že Claude Code běží v **režimu Auto** (je výchozí). Pod polem pro zprávu má být `auto mode on`. Pokud tam není, přepínejte režimy klávesami **Shift+Tab**, dokud se neobjeví.
+5. Napište `/exit` a Claude Code zavřete.
 
 Pak otevřete složku repozitáře ve VS Code:
 ```bash
 code .
 ```
-Otevřete panel Claude Code (ikona Claude v horní liště editoru nebo v postranním panelu). Pokud se zeptá na přihlášení, přihlaste se stejným účtem Claude Pro. Panel pak zavřete.
+Otevřete panel Claude Code (ikona Claude v horní liště editoru nebo v postranním panelu). Pokud se zeptá na přihlášení, přihlaste se stejným účtem Claude Pro. Pod polem pro zprávu je ukazatel režimu: musí být **Auto**, jinak na něj klikněte a Auto vyberte. Panel pak zavřete.
 
 ## Krok 6: Ověřte, že je vše připraveno
 Ve složce repozitáře spusťte `claude` (nebo otevřete panel Claude Code ve VS Code) a napište:
