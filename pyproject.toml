@@ -1,0 +1,24 @@
+[project]
+name = "maiday-analyza-dat"
+version = "1.0.0"
+description = "Workshop MAIDAY 2026: analýza dat s Claude Code (kolony v Brně během uzavírky tunelů)"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+# Verze jsou pevné, aby všichni měli stejné prostředí a stejná čísla.
+# duckdb musí mít stejnou verzi jako DuckDB CLI (1.5.6), jinak nemusí jít
+# databázový soubor otevřít z druhého nástroje.
+dependencies = [
+    "duckdb==1.5.6",
+    "pandas==3.1.0",
+    "pyarrow==26.0.0",
+    "numpy==2.5.4",
+    "scipy==1.18.1",
+    "matplotlib==3.11.2",
+    "requests==2.34.2",
+    "pyyaml==6.0.3",
+    "pytest==9.2.0",
+    "tzdata==2026.6",
+]
+
+[tool.uv]
+package = false
