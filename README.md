@@ -69,7 +69,7 @@ Jde to i ručně: ve VS Code otevřete Rozšíření (Ctrl+Shift+X, na Macu Cmd+
 Ověření: `code --list-extensions` musí ve výpisu obsahovat `anthropic.claude-code`.
 
 ## Krok 3: Stáhněte repozitář
-Repozitář uložte do složky, kterou **nesynchronizuje** OneDrive, Dropbox ani iCloud. Vytvořte si třeba složku `projekty` a přejděte do ní:
+Vytvořte si třeba složku `projekty` a přejděte do ní:
 ```powershell
 mkdir C:\projekty
 cd C:\projekty
@@ -104,21 +104,23 @@ code .
 Otevřete panel Claude Code (ikona Claude v horní liště editoru nebo v postranním panelu). Pokud se zeptá na přihlášení, přihlaste se stejným účtem Claude Pro. Panel pak zavřete.
 
 ## Krok 6: Ověřte, že je vše připraveno
-Ve složce repozitáře spusťte:
-```bash
-uv run python scripts/kontrola.py
+Ve složce repozitáře spusťte `claude` (nebo otevřete panel Claude Code ve VS Code) a napište:
 ```
-Na konci musí být **„Vše připraveno na workshop.“** Pokud kontrola vypíše `[CHYBA]`, poznámka pod ní řekne, co udělat. Po opravě spusťte kontrolu znovu.
+Zkontroluj prostředí
+```
+Claude spustí kontrolu a pomůže vám opravit případné chyby. Když je vše v pořádku, zeptá se, jestli může smazat soubory pro přípravu (tento návod a kontrolní skript). Souhlaste. Pak vás vyzve, abyste konverzaci ukončili a začali novou. Tím je repozitář připravený na workshop.
+
+Kontrolu jde spustit i ručně: `uv run python scripts/kontrola.py`. Na konci musí být **„Vše připraveno na workshop.“**
 
 ### Kontrolní seznam
 Než přijdete na workshop, měli byste mít:
 - [ ] účet Claude Pro,
 - [ ] nainstalované Python, Git, uv, Node.js, DuckDB CLI, Claude Code a VS Code (krok 2),
 - [ ] rozšíření Claude Code ve VS Code (krok 2),
-- [ ] stažený repozitář mimo OneDrive (krok 3),
+- [ ] stažený repozitář (krok 3),
 - [ ] proběhlé `uv sync` (krok 4),
 - [ ] přihlášení do Claude Code v terminálu i ve VS Code (krok 5),
-- [ ] kontrolu s výsledkem „Vše připraveno na workshop.“ (krok 6),
+- [ ] kontrolu s výsledkem „Vše připraveno na workshop.“ a smazané přípravné soubory (krok 6),
 - [ ] nabitý notebook a nabíječku.
 
 Hotovo, na workshopu začnete rovnou.
