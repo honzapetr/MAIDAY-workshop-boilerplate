@@ -68,6 +68,14 @@ Jde to i ručně: ve VS Code otevřete Rozšíření (Ctrl+Shift+X, na Macu Cmd+
 
 Ověření: `code --list-extensions` musí ve výpisu obsahovat `anthropic.claude-code`.
 
+### Nastavte Git: jméno a e-mail
+Na workshopu si budeme průběh ukládat do gitu. Bez jména a e-mailu git žádnou změnu neuloží. Nastavuje se jednou pro celý počítač (pokud už git používáte, máte to nejspíš hotové):
+```
+git config --global user.name "Jméno Příjmení"
+git config --global user.email "vas@email.cz"
+```
+Ověření: `git config user.name` a `git config user.email` musí vypsat vaše jméno a e-mail.
+
 ## Krok 3: Stáhněte repozitář
 Vytvořte si třeba složku `projekty` a přejděte do ní:
 ```powershell
@@ -109,7 +117,7 @@ Ve složce repozitáře spusťte `claude` (nebo otevřete panel Claude Code ve V
 ```
 Zkontroluj prostředí
 ```
-Claude spustí kontrolu a pomůže vám opravit případné chyby. Když je vše v pořádku, zeptá se, jestli může dokončit přípravu (smaže kontrolní skript a tento návod nahradí krátkým popisem dat). Souhlaste. Pak vás vyzve, abyste konverzaci ukončili a začali novou. Tím je repozitář připravený na workshop.
+Claude spustí kontrolu a pomůže vám opravit případné chyby. Když je vše v pořádku, zeptá se, jestli může dokončit přípravu (smaže kontrolní skript, tento návod nahradí krátkým popisem dat a startovní stav uloží do gitu jako commit „Startovní stav workshopu“). Souhlaste. Pak vás vyzve, abyste konverzaci ukončili a začali novou. Tím je repozitář připravený na workshop.
 
 Kontrolu jde spustit i ručně: `uv run python scripts/kontrola.py`. Na konci musí být **„Vše připraveno na workshop.“**
 
@@ -118,10 +126,11 @@ Než přijdete na workshop, měli byste mít:
 - [ ] účet Claude Pro,
 - [ ] nainstalované Python, Git, uv, Node.js, DuckDB CLI, Claude Code a VS Code (krok 2),
 - [ ] rozšíření Claude Code ve VS Code (krok 2),
+- [ ] v gitu nastavené jméno a e-mail (krok 2),
 - [ ] stažený repozitář (krok 3),
 - [ ] proběhlé `uv sync` (krok 4),
 - [ ] přihlášení do Claude Code v terminálu i ve VS Code (krok 5),
-- [ ] kontrolu s výsledkem „Vše připraveno na workshop.“ a dokončenou přípravu (krok 6),
+- [ ] kontrolu s výsledkem „Vše připraveno na workshop.“ a dokončenou přípravu uloženou v gitu (krok 6),
 - [ ] nabitý notebook a nabíječku.
 
 Hotovo, na workshopu začnete rovnou.

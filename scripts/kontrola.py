@@ -94,7 +94,22 @@ def main():
         ok(f"Python v systému {'.'.join(map(str, v))}")
 
     code, out = run("git", "--version")
-    ok(out) if code == 0 else fail("Git", "Nenalezen. Viz README, krok 2.")
+    if code != 0:
+        fail("Git", "Nenalezen. Viz README, krok 2.")
+    else:
+        ok(out)
+        # Bez jména a e-mailu git odmítne commit („empty ident name … not allowed“)
+        for key, label in (("user.name", "jméno"), ("user.email", "e-mail")):
+            code, out = run("git", "-C", str(ROOT), "config", key)
+            if code == 0 and out:
+                ok(f"Git: {label} {out}")
+            else:
+                fail(f"Git: {label}", f"Není nastavené. Spusťte: git config --global {key} \"...\" (README, krok 2).")
+        code, out = run("git", "-C", str(ROOT), "rev-parse", "--is-inside-work-tree")
+        if code == 0 and out == "true":
+            ok("Složka je repozitář gitu")
+        else:
+            fail("Repozitář gitu", "Složka není repozitář. Stáhněte ji přes git clone (README, krok 3).")
 
     code, out = run("node", "--version")
     v = version(out) if code == 0 else None
