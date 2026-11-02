@@ -84,8 +84,8 @@ cd C:\projekty
 ```
 Na Macu: `mkdir ~/projekty` a `cd ~/projekty`. Pak stáhněte repozitář:
 ```bash
-git clone https://github.com/honzapetr/MAIDAY-workshop-boilerplate.git maiday-analyza-dat
-cd maiday-analyza-dat
+git clone https://github.com/honzapetr/MAIDAY-workshop-boilerplate.git analyza-dopravy-brno
+cd analyza-dopravy-brno
 ```
 
 ## Krok 4: Připravte Python
@@ -117,7 +117,7 @@ Ve složce repozitáře spusťte `claude` (nebo otevřete panel Claude Code ve V
 ```
 Zkontroluj prostředí
 ```
-Claude spustí kontrolu a pomůže vám opravit případné chyby. Když je vše v pořádku, zeptá se, jestli může dokončit přípravu (smaže kontrolní skript i své dočasné instrukce v CLAUDE.md, tento návod nahradí krátkým popisem dat a startovní stav uloží do gitu jako commit „Startovní stav workshopu“). Souhlaste. Pak vás vyzve, abyste konverzaci ukončili a začali novou. Tím je repozitář připravený na workshop.
+Claude spustí kontrolu a pomůže vám opravit případné chyby. Když je vše v pořádku, zeptá se, jestli může dokončit přípravu (smaže kontrolní skript i své dočasné instrukce v CLAUDE.md, tento návod nahradí krátkým popisem dat a startovní stav uloží do gitu jako commit „Startovní stav“). Souhlaste. Pak vás vyzve, abyste konverzaci ukončili a začali novou. Tím je repozitář připravený na workshop.
 
 Kontrolu jde spustit i ručně: `uv run python scripts/kontrola.py`. Na konci musí být **„Vše připraveno na workshop.“**
 

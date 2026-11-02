@@ -1,7 +1,7 @@
 [project]
-name = "maiday-analyza-dat"
+name = "analyza-dopravy-brno"
 version = "1.0.0"
-description = "Workshop MAIDAY 2026: analýza dat s Claude Code (kolony v Brně během uzavírky tunelů)"
+description = "Analýza dopravních dat Waze z Brna"
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
 # Verze jsou pevné, aby všichni měli stejné prostředí a stejná čísla.
